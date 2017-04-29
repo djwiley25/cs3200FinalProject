@@ -15,12 +15,18 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var destinationDetailLabel: UILabel!
     @IBOutlet weak var notesDetailLabel: UITextView!
     
-    var detailText=""
+    var timeDetailText=""
+    var pickUpText=""
+    var destText=""
+    var notesText=""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timeDetailLabel.text=detailText
+        timeDetailLabel.text=timeDetailText
+        pickupDetailLabel.text=pickUpText
+        destinationDetailLabel.text=destText
+        notesDetailLabel.text=notesText
 
         // Do any additional setup after loading the view.
     }
@@ -31,14 +37,5 @@ class DetailViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

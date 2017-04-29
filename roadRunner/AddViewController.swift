@@ -10,6 +10,23 @@ import UIKit
 
 class AddViewController: UIViewController {
 
+    @IBOutlet weak var timePicker: UIDatePicker!
+    @IBOutlet weak var pickUpTextField: UITextField!
+    @IBOutlet weak var destTextField: UITextField!
+    @IBOutlet weak var notesTextView: UITextView!
+    
+    @IBOutlet weak var selectedDate: UILabel!
+    
+    @IBAction func datePickerAction(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd HH:mm"
+        let strDate = dateFormatter.string(from: timePicker.date)
+        self.selectedDate.text = strDate
+        print(selectedDate)
+    }
+    
+    //var date :NSDate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
